@@ -1,0 +1,49 @@
+.carousel-container {
+  width: 100%;
+  height: 300px;
+}
+
+/* SLIDE */
+.slide {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  color: #222;
+}
+
+/* BACKGROUNDS */
+.slide1 {
+  background: url("../assets/banner3.png") center/cover no-repeat;
+}
+
+.slide2 {
+  background: url("../assets/banner1.png") center/cover no-repeat;
+}
+
+.slide3 {
+  background: url("../assets/banner2.png") center/cover no-repeat;
+}
+
+/* CONTENT */
+.slide-content {
+  max-width: 400px;
+}
+
+.slide-content h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.slide-content p {
+  margin: 10px 0;
+}
+
+.slide-content button {
+  padding: 10px 15px;
+  background: #ff6b00;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}

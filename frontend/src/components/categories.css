@@ -1,0 +1,151 @@
+/* Wrapper */
+.category-wrapper {
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;
+  padding: 15px;
+  background: #f9f9f9;
+}
+
+/* Title */
+.section-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* Horizontal Scroll for mobile */
+.category-scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+/* Hide scrollbar (optional) */
+.category-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card */
+.category-card {
+  min-width: 120px;
+  background: linear-gradient(135deg, #ff7f50, #ff6347); /* Gradient colors */
+  border-radius: 20px;
+  padding: 15px 10px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #f0f0f0;
+  transition: 0.4s ease;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card hover effect */
+.category-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* Image */
+.category-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 15px;
+  margin-bottom: 8px;
+  background: #fff; /* Optional: for contrast */
+  padding: 10px;
+  transition: 0.3s ease;
+}
+
+.category-card img:hover {
+  transform: scale(1.1);
+}
+
+/* Text */
+.category-card p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+/* Responsive Grid for tablet & desktop */
+@media (min-width: 600px) {
+  .category-scroll {
+    overflow-x: unset;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .category-card {
+    min-width: 140px;
+    margin: 8px;
+  }
+
+  .category-card img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (min-width: 992px) {
+  .category-card {
+    min-width: 160px;
+  }
+
+  .category-card img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+}
+
+/* Mobile tweaks */
+@media (max-width: 480px) {
+  .category-card {
+    min-width: 110px;
+    padding: 12px 8px;
+  }
+
+  .category-card img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .category-card p {
+    font-size: 13px;
+  }
+}
+/* ✅ CATEGORY NAME (Professional) */
+.category-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  margin-top: 8px;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+/* ✅ ACTIVE CATEGORY */
+.category-card.active {
+  border: 2px solid #ff9900;
+  background: #fff7e6;
+}
+
+/* OPTIONAL HOVER IMPROVEMENT */
+.category-card:hover .category-name {
+  color: #ff9900;
+}
