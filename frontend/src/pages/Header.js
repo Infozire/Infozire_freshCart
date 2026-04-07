@@ -12,13 +12,24 @@ export default function Header() {
   const [user, setUser] = useState(null);
   const [categories, setCategories] = useState([]);
 const [cartCount, setCartCount] = useState(0);
-
-  useEffect(() => {
+useEffect(() => {
+  const loadUser = () => {
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
       setUser(JSON.parse(storedUser));
     }
-  }, []);
+  };
+
+  loadUser();
+
+  // ✅ LISTEN FOR PROFILE UPDATE
+  window.addEventListener("userUpdated", loadUser);
+
+  return () => {
+    window.removeEventListener("userUpdated", loadUser);
+  };
+}, []);
+
   const handleLogout = () => {
     localStorage.removeItem("user"); // remove user
     setUser(null); // reset state

@@ -23,7 +23,7 @@ export default function Signup() {
       });
 
       toast.success("Signup Successful ✅");
-      navigate("/login");
+      navigate("/");
 
     } catch (err) {
       toast.error("Signup Failed ❌");
